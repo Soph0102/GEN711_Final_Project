@@ -3,3 +3,4 @@
 Contributors:
 -Sophie Welch
 -Noelle DiVeglia
+-Emily Small 
