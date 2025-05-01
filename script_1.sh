@@ -16,3 +16,22 @@ qiime tools import \
  --input-format PairedEndFastqManifestPhred33V2
 
 #A demux.qza file was produced.
+# Summarizing and Visualizing Data
+
+qiime demux summarize \
+--i-data demux.qza \
+--o-visualization visual.qzv
+
+#Output is a visual.qzv file that can be put into Qiime2 visualizer online.
+
+ qiime dada2 denoise-paired \
+  --i-demultiplexed-seqs demux.qza \
+  --p-trim-left-f 0 \
+  --p-trunc-len-f 250 \
+  --p-trim-left-r 0 \
+  --p-trunc-len-r 250 \
+  --p-n-threads 0 \
+  --o-representative-sequences asv-seqs.qza \
+  --o-table asv-table.qza \
+  --o-denoising-stats stats.qza
+
