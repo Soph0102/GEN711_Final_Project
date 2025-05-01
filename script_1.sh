@@ -22,6 +22,7 @@ qiime demux summarize \
 --i-data demux.qza \
 --o-visualization visual.qzv
 
+
 #Output is a visual.qzv file that can be put into Qiime2 visualizer online.
 
  qiime dada2 denoise-paired \
@@ -35,3 +36,19 @@ qiime demux summarize \
   --o-table asv-table.qza \
   --o-denoising-stats stats.qza
 
+qiime metadata tabulate \
+--m-input-file stats.qza
+--o-visualization visual-stats.qzv
+
+#this produces a visual-stats.qzv file that can be put into the qiime2 visualizer.
+qiime feature-table summarize-plus \
+  --i-table asv-table.qza \
+  --m-metadata-file qiime2dataset/metadata.tsv \
+  --o-summary asv-table.qzv \
+  --o-sample-frequencies sample-frequencies.qza \
+  --o-feature-frequencies asv-frequencies.qza
+
+qiime feature-table tabulate-seqs \
+  --i-data asv-seqs.qza \
+  --m-metadata-file asv-frequencies.qza \
+  --o-visualization asv-seqs.qzv
