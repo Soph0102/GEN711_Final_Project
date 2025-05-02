@@ -2,7 +2,7 @@
 
 #Data Retrieval and Environment Setup
 tmux
-#(tmux -new was used initially)
+# tmux -new was used initially, tmux attach was used sequentially
 
 cp /tmp/FinalProjectData -r ~
 
@@ -41,6 +41,9 @@ qiime metadata tabulate \
 --o-visualization visual-stats.qzv
 
 #this produces a visual-stats.qzv file that can be put into the qiime2 visualizer.
+
+#moving to upstream data analysis and feature data
+
 qiime feature-table summarize-plus \
   --i-table asv-table.qza \
   --m-metadata-file qiime2dataset/metadata.tsv \
@@ -52,3 +55,4 @@ qiime feature-table tabulate-seqs \
   --i-data asv-seqs.qza \
   --m-metadata-file asv-frequencies.qza \
   --o-visualization asv-seqs.qzv
+
