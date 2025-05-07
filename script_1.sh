@@ -56,3 +56,13 @@ qiime feature-table tabulate-seqs \
   --m-metadata-file asv-frequencies.qza \
   --o-visualization asv-seqs.qzv
 
+qiime feature-table filter-features \
+  --i-table asv-table.qza \
+  --p-min-samples 2 \
+  --o-filtered-table asv-table-ms2.qza
+
+qiime feature-table filter-seqs \
+  --i-data asv-seqs.qza \
+  --i-table asv-table-ms2.qza \
+  --o-filtered-data asv-seqs-ms2.qza
+#I will add description for these later. I am currently locked in on the next step 
