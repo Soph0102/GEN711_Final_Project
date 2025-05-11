@@ -85,3 +85,18 @@ qiime feature-table tabulate-seqs
  --i-taxonomy taxonomy.qza
  --o-visualization asv-seqs-ms2.qzv
 #output is the asv-seqs-ms2.qzv file that can be input into the online Qiime Visualizer
+
+#Moving to Downstream Analysis
+
+#The next step is to select only the reads with a certain depth. For this step, make sure kmer and boots plugins are installed for this.
+qiime boots kmer-diversity \
+  --i-table asv-table-ms2.qza \
+  --i-sequences asv-seqs-ms2.qza \
+  --m-metadata-file qiime2_dataset/metadata.tsv \
+  --p-sampling-depth 96 \
+  --p-n 10 \
+  --p-replacement \
+  --p-alpha-average-method median \
+  --p-beta-average-method medoid \
+  --output-dir boots-kmer-diversity
+#output is the kmer-diversity directory
