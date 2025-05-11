@@ -5,11 +5,11 @@ Contributors:
 -Noelle DiVeglia
 -Emily Small 
 
-##Background
+## Background
 
-##Materials and Methods
+## Materials and Methods
 This project was done using the Qiime2 Amplicon environment through Conda.
 
-##Results
+## Results
 
-##Discussion
+## Discussion
