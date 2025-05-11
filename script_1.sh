@@ -37,8 +37,8 @@ qiime demux summarize \
   --o-denoising-stats stats.qza
 
 qiime metadata tabulate \
---m-input-file stats.qza
---o-visualization visual-stats.qzv
+ --m-input-file stats.qza
+ --o-visualization visual-stats.qzv
 
 #this produces a visual-stats.qzv file that can be put into the qiime2 visualizer.
 
@@ -65,4 +65,23 @@ qiime feature-table filter-seqs \
   --i-data asv-seqs.qza \
   --i-table asv-table-ms2.qza \
   --o-filtered-data asv-seqs-ms2.qza
-#I will add description for these later. I am currently locked in on the next step 
+#the output is the asv-seqs-ms2.qza file that is useful for the taoxnomic classification step.
+
+#Moving to Taxonomic Classification
+
+#This first step is grabbing the classifier file itself.
+
+wget -O 'suboptimal-16S-rRNA-classifier.qza'   'https://gut-to-soil-tutorial.readthedocs.io/en/latest/data/gut-to-soil/suboptimal-16S-rRNA-classifier.qza'
+
+#This is using the classifier to find and summarize features in the asv-seqs-ms2.qza file and output it into the taxonomy file.
+ qiime feature-classifier classify-sklearn
+ --i-classifier suboptimal-16S-rRNA-classifier.qza
+ --i-reads asv-seqs-ms2.qza
+ --o-classification taxonomy.qza
+#output is the taxonomy.qza file that is used for the next feature table tabulate step.
+
+qiime feature-table tabulate-seqs
+ --i-data asv-seqs-ms2.qza
+ --i-taxonomy taxonomy.qza
+ --o-visualization asv-seqs-ms2.qzv
+#output is the asv-seqs-ms2.qzv file that can be input into the online Qiime Visualizer
