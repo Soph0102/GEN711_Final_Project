@@ -7,7 +7,7 @@ Contributors:
 
 ## Background
 -Data was borrowed from a grad student by Kaleb 
-This data is formated in 
+- This data is formated in 
   - Illumina Hi Seq 2500
   - Paried end reads
   - 250 bp sequencing reads
