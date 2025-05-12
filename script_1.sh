@@ -70,7 +70,7 @@ qiime feature-table filter-seqs \
   --i-data asv-seqs.qza \
   --i-table asv-table-ms2.qza \
   --o-filtered-data asv-seqs-ms2.qza
-#the output is the asv-seqs-ms2.qza file that is useful for the taoxnomic classification step.
+#the output is the asv-seqs-ms2.qza file that is useful for the taxonomic classification step.
 
 #Moving to Taxonomic Classification
 
@@ -123,3 +123,4 @@ qiime taxa barplot
  --m-metadata-file qiime2_dataset/metadata.tsv
  --o-visualization taxa-bar-plots.qzv
 #taxa-bar-plot.qzv is able to be put into the Qiime2 Visualizer to obtain the bar plot.
+Done
