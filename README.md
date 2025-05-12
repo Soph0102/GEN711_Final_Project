@@ -12,7 +12,7 @@ Contributors:
   - Paried end reads
   - 250 bp sequencing reads
   - 20 samples total
-- Two collection method
+- Two collection methods
   -  one where the duckweed was skimmed  from the top of the pond
   - one where there was no skimming was used sample was directly taken from the pond
 - Each sample had 5 replicates of each treatment
