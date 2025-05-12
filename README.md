@@ -23,5 +23,42 @@ Contributors:
 This project was done using the Qiime2 Amplicon environment through Conda.
 
 ## Results
+- Raw reads and metadata found in /tmp/FinalProjectData​
+    -This was done in the Qiime2-amplicon-2024.5 conda environment​
 
+### Qiime Tools Import​
+- Imported the Qiime toolset for paired end sequences​
+- Used to get the demultiplexed sequences into a .qza format
+
+### Demux Summarize​
+- Created a visual.qzv of the demultiplexed sequences​
+- Visual.qzv contained average reads in each sample and a quality score plot​
+
+### Denoising using DADA2​
+- Removed poor quality reads and any sequence errors from samples​
+- Used Metadata Tabulate to produce a table with data on what was removed
+  
+### Feature Table​
+- Used summarize-plus to obtain more data on sequences and their frequencies, features, and associated samples​
+- Used tabulate-seqs to produce an asv-seqs.qzv to input into the visualization program​
+
+### Filtering​
+- Used filter-features to sort table by the features of each sequence​
+- Used filter-seqs to create a sorted sequence .qza file to use for taxonomy
+
+### Taxonomy
+- Obtained the suboptimal 16S rRNA classifier file using wget​
+  - Tool found at: https://gut-to-soil-tutorial.readthedocs.io/en/latest/data/gut-to-soil/suboptimal-16S-rRNA-classifier.qza​
+- Used feature-classify classify-sklearn to match taxonomic information to the sequences ​
+- Used feature-table tabulate-seqs to create a .qzv file for visualization of taxa
+
+### Boots and Kmer Diversity​
+- Used to only keep sequences that have a certain depth​
+
+### Alpha Rarefaction​
+- Used to generate a scatter plot on the depth of reads and sequence diversity​
+
+### Taxa Bar Plot​
+- Used to generate a bar plot of the taxa in each sample
+  
 ## Discussion
