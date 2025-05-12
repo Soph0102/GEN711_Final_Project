@@ -14,8 +14,8 @@ Contributors:
 - Included in the files are
   - 20 total samples
   -  Two collection methods
-  -  one where the duckweed was skimmed  from the top of the pond
-  - one where there was no skimming was used sample was directly taken from the pond
+      -  one where the duckweed was skimmed  from the top of the pond
+     -  one where there was no skimming was used sample was directly taken from the pond
 - Each sample had 5 replicates of each treatment
   - A metadata file was used to tell Qiime program which samples are which
   -  A manifest file was used to tell Qiime where the fastq files are located for importing of data and tables               
