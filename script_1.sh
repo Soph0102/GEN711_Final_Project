@@ -55,11 +55,16 @@ qiime feature-table tabulate-seqs \
   --i-data asv-seqs.qza \
   --m-metadata-file asv-frequencies.qza \
   --o-visualization asv-seqs.qzv
+#asv-seqs.qzv can be put into the visulaizer to obtain BLAST ready sequences
+
+#Filter feature tables to those with at least 2 samples
 
 qiime feature-table filter-features \
   --i-table asv-table.qza \
   --p-min-samples 2 \
   --o-filtered-table asv-table-ms2.qza
+
+#Filter to only sequences in the filtered table
 
 qiime feature-table filter-seqs \
   --i-data asv-seqs.qza \
@@ -100,3 +105,21 @@ qiime boots kmer-diversity \
   --p-beta-average-method medoid \
   --output-dir boots-kmer-diversity
 #output is the kmer-diversity directory
+
+#visualize the alpha rarefaction
+
+qiime diversity alpha-rarefaction \
+  --i-table asv-table-ms2.qza \
+  --p-max-depth 260 \
+  --m-metadata-file qiime2_dataset/metadata.tsv \
+  --o-visualization alpha-rarefaction.qzv
+#alpha-rarefaction.qzv can be input into the Qiime2 Visualizer
+
+#Make the bar plot
+
+qiime taxa barplot
+ --i-table asv-table-ms2.qza
+ --i-taxonomy taxonomy.qza
+ --m-metadata-file qiime2_dataset/metadata.tsv
+ --o-visualization taxa-bar-plots.qzv
+#taxa-bar-plot.qzv is able to be put into the Qiime2 Visualizer to obtain the bar plot.
