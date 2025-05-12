@@ -22,7 +22,7 @@ Contributors:
 ## Materials and Methods
 This project was done using the Qiime2 Amplicon environment through Conda.
 
-## Results
+ ### Obtaining Data
 - Raw reads and metadata found in /tmp/FinalProjectData​
     -This was done in the Qiime2-amplicon-2024.5 conda environment​
 
@@ -60,5 +60,6 @@ This project was done using the Qiime2 Amplicon environment through Conda.
 
 ### Taxa Bar Plot​
 - Used to generate a bar plot of the taxa in each sample
-  
+
+## Results  
 ## Discussion
