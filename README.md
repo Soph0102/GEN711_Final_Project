@@ -7,10 +7,11 @@ Contributors:
 
 ## Background
 -Data was borrowed from a grad student by Kaleb 
-- Illumina Hi Seq 2500
-- Paried end reads
-- 250 bp sequencing reads
-- 20 samples total
+this data is formated in 
+  - Illumina Hi Seq 2500
+  - Paried end reads
+  - 250 bp sequencing reads
+  - 20 samples total
 - Two collection method
   -  one where the duckweed was skimmed  from the top of the pond
   - one where there was no skimming was used sample was directly taken from the pond
