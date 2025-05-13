@@ -62,6 +62,21 @@ This project was done using the Qiime2 Amplicon environment through Conda.
 - Used to generate a bar plot of the taxa in each sample
 
 ## Results  
+- Alpha Rarefaction Plot
+- ![alpha-rarefaction plot](https://github.com/user-attachments/assets/9dcbc21a-aad9-4da6-ab8c-d42c106155fa)
+- Plateau indicates efficienct sequencing depth.
+
+
+- Taxa Bar Plot and Legend
+- ![taxa bar plots](https://github.com/user-attachments/assets/a4e3ea85-ec1c-4c50-bf40-29092c7a9189)
+- ![taxa bar plot legend](https://github.com/user-attachments/assets/4a70cc5f-5554-4738-a1a2-d870b446126b)
+- - Noticeable shift towards bacterial colonies on duck weed.
+
+- Demux Forward Reads
+- ![demux-summary forward reads](https://github.com/user-attachments/assets/9c29c842-dde3-4fbe-9409-346c9532b6cc)
+
+- Demux Reverse Reads
+- ![demux-summary reverse reads](https://github.com/user-attachments/assets/01aa5a0d-1321-4bc1-ac24-2e0807d432f6)
 
 ## Citations
   ### Qiime2 and Tutorial
