@@ -62,4 +62,3 @@ This project was done using the Qiime2 Amplicon environment through Conda.
 - Used to generate a bar plot of the taxa in each sample
 
 ## Results  
-## Discussion
